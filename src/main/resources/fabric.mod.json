@@ -1,0 +1,40 @@
+{
+	"schemaVersion": 1,
+	"id": "meow-mod",
+	"version": "${version}",
+	"name": "Meow Mod",
+	"description": "A mod that meows",
+	"authors": [
+		"Me! :3"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "MIT",
+	"icon": "assets/meow-mod/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"meow.mod.MeowMod"
+		],
+		"fabric-datagen": [
+			"meow.mod.MeowModDataGenerator"
+		],
+		"client": [
+			"meow.mod.MeowModClient"
+		]
+	},
+	"mixins": [
+		"meow-mod.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.16.9",
+		"minecraft": "~1.21.1",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
